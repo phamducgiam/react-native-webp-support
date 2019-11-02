@@ -86,14 +86,14 @@ RCT_EXPORT_MODULE()
         
         WebPAnimDecoderDelete(dec);
         
-        CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
+        /*CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"contents"];
         animation.calculationMode = kCAAnimationDiscrete;
         animation.repeatCount = anim_info.loop_count == 0 ? HUGE_VALF : anim_info.loop_count;
         animation.keyTimes = keyTimes;
         animation.values = images;
         animation.duration = timestamp / 1000.0;
         animation.removedOnCompletion = NO;
-        image.reactKeyframeAnimation = animation;
+        image.reactKeyframeAnimation = animation;*/
     } else {
         int width = 0, height = 0;
         uint8_t *data = WebPDecodeRGBA([imageData bytes], [imageData length], &width, &height);
